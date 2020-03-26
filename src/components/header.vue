@@ -1,13 +1,18 @@
 <template>
   <header class="header" id="header">
-    <h1>Camilo Parra || Web developer</h1>
+    <h1 v-text="title"></h1>
   </header>
 </template>
 
 <script>
 export default {
   name: 'Header',
-  props: {}
+  props: {
+    title: {
+      type: String,
+      default: 'Camilo Parra || Web developer'
+    }
+  }
 }
 </script>
 

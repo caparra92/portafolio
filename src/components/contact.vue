@@ -1,9 +1,9 @@
 <template>
   <section class="container contact" id="contact">
     <article class="article">
-      <h1 class="title">Contact</h1>
-      <p>You can contact us for email through caparra92@gmail.com or in the social media section below the menu</p>
-      <p>Is 10:11 pm in Pasto, but i'm get ready for contact by e-mail or social media</p>
+      <h1 class="title" v-text = 'title'></h1>
+      <p v-text = 'contactP'></p>
+      <p v-text = 'contactP2'></p>
     </article>
   </section>
 </template>
@@ -11,7 +11,20 @@
 <script>
 export default {
   name: 'Contact',
-  props: {}
+  props: {
+    title: {
+      type: String,
+      default: 'Contact'
+    },
+    contactP: {
+      type: String,
+      default: 'You can contact us for email through caparra92@gmail.com or in the social media section below the menu'
+    },
+    contactP2: {
+      type: String,
+      default: "Is 10:11 pm in Pasto, but i'm get ready for contact by e-mail or social media"
+    }
+  }
 }
 </script>
 

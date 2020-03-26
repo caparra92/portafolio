@@ -1,12 +1,14 @@
 <template>
   <div id='app'>
-    <Sidebar />
-    <Header />
-    <Section />
-    <Projects />
-    <Skills />
-    <Contact />
-    <Footer />
+    <Sidebar @onTranslate = translateLeft @onReturn = returnLeft />
+    <div ref="mainContent">
+      <Header />
+      <Section />
+      <Projects />
+      <Skills />
+      <Contact />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -29,6 +31,22 @@ export default {
     Skills,
     Contact,
     Footer
+  },
+  data () {
+    return {
+      mainContent: 'main-content'
+    }
+  },
+  props: {},
+  methods: {
+    async translateLeft () {
+      this.$refs.mainContent.className = 'main-content'
+      await console.log('Traslado recibido')
+    },
+    returnLeft () {
+      this.$refs.mainContent.className = 'main'
+      console.log('retorno recibido')
+    }
   }
 }
 </script>
@@ -42,7 +60,6 @@ export default {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Josefin Sans' sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -57,6 +74,9 @@ figure {
 }
 p {
   margin-bottom: 40px;
+}
+.main-content {
+  margin-left: 20%;
 }
 .container {
   margin: 5px;
@@ -73,7 +93,7 @@ p {
   text-transform: uppercase;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Josefin Sans' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

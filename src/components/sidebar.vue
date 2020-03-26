@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
     <div class="menu">
-      <button id="toggle" @click="show = true">&#9776;</button>
+      <button id="toggle" @click="onTranslate">|||</button>
     </div>
     <transition name="fade">
       <div class="sidebar" id="sideBar" v-if="show">
-        <button id="closeBtn" @click="show = !show"><i class="fa fa-bars"></i></button>
+        <button id="closeBtn" @click="onReturn">&times;</button>
         <ul>
           <a href="#header">
             <li class="list">
@@ -55,7 +55,25 @@ export default {
   props: {},
   data () {
     return {
-      show: false
+      show: false,
+      translate: false
+    }
+  },
+  methods: {
+    onTranslate () {
+      if (!this.show && !this.translate) {
+        this.show = true
+        this.translate = true
+        this.$emit('onTranslate', this.translate)
+      } else {
+        this.show = false
+        this.translate = false
+      }
+    },
+    onReturn () {
+      this.show = false
+      this.translate = false
+      this.$emit('onReturn', this.translate)
     }
   }
 }
@@ -63,17 +81,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.slide-fade-enter-active {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.fade-enter-active {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
-.slide-fade-leave-active {
+.fade-leave-active {
   -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
   -o-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.slide-fade-enter, .slide-fade-leave-to
+.fade-enter, .fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
   -webkit-transform: translateX(10px);
   -ms-transform: translateX(10px);
@@ -90,31 +108,41 @@ export default {
 }
 #toggle {
   top: 30px;
-  left: 25px;
+  left: 30px;
+  font-weight: 800;
   position: fixed;
   width: 35px;
-  font-size: 35px;
+  font-size: 3em;
   color: #413968;
   cursor: pointer;
   border: none;
   background: none;
+  transition: all 0.5s;
+  -webkit-transition: all 0.25s;
 }
-#toggle:hover{
+#toggle:hover {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
   color: #fff;
   -webkit-text-stroke: 1px #000;
 }
 #closeBtn {
-  padding: 5px;
-  width: 35px;
-  font-size: 35px;
+  padding: 0;
+  left: 20%;
+  top: -5px;
+  font-size: 4em;
   color: #fff;
   cursor: pointer;
   border: none;
   background: none;
   text-align: right;
-  display: inline-block;
   position: relative;
-  left: 75px;
+  transition: all 0.35s;
+  -webkit-transition: all 0.25s;
+}
+#closeBtn:hover {
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
 }
 .wrapper {
   display: flex;
@@ -127,6 +155,9 @@ export default {
   height: 100%;
   background: #413968;
   padding: 30px 0;
+  box-shadow: 5px 5px 10px grey;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
   /* -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; */

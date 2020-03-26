@@ -1,13 +1,18 @@
 <template>
     <div class="footer">
-        <p>Copyright &copy; 2020 Camilo Parra</p>
+        <p v-text="content"></p>
     </div>
 </template>
 
 <script>
 export default {
   name: 'Footer',
-  props: {}
+  props: {
+    content: {
+      type: String,
+      default: 'Copyright ©2020 Camilo Parra'
+    }
+  }
 }
 </script>
 
