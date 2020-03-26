@@ -3,7 +3,7 @@
     <article class="article">
       <h1 class="title" v-text = 'title'></h1>
       <p v-text = 'contactP'></p>
-      <p v-text = 'contactP2'></p>
+      <p>{{calcTime(city,zone) + contactP2}}</p>
     </article>
   </section>
 </template>
@@ -22,9 +22,34 @@ export default {
     },
     contactP2: {
       type: String,
-      default: "Is 10:11 pm in Pasto, but i'm get ready for contact by e-mail or social media"
+      default: ", but i'm get ready for contact by e-mail or social media"
+    },
+    city: {
+      type: String,
+      default: 'Pasto'
+    },
+    zone: {
+      type: String,
+      default: '-5'
+    },
+    calcTime: {
+      type: Function,
+      default (city, offset) {
+        // creamos el objeto Date (la selecciona de la máquina cliente)
+        const d = new Date()
+        // lo convierte  a milisegundos
+        // añade la dirferencia horaria
+        // recupera la hora en formato UTC
+        const utc = d.getTime() + (d.getTimezoneOffset() * 60000)
+        // crea un nuevo objeto Date usando la diferencia dada.
+        const nd = new Date(utc + (3600000 * offset))
+        // devuelve la hora como string.
+        return 'Is ' + nd.getHours() + ':' + nd.getMinutes() + ':' + nd.getSeconds() + ' in ' + city
+        // console.log(calcTime('Pasto', '-5'))
+      }
     }
-  }
+  },
+  methods: {}
 }
 </script>
 

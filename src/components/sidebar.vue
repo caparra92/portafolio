@@ -35,13 +35,13 @@
         </ul>
         <div class="social-media">
           <a href="#">
-            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-facebook-f facebook"></i>
           </a>
           <a href="#">
-            <i class="fa fa-instagram"></i>
+            <i class="fa fa-instagram instagram"></i>
           </a>
           <a href="#">
-            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-linkedin linkedin"></i>
           </a>
         </div>
       </div>
@@ -170,6 +170,9 @@ export default {
   left: 25px;
   cursor: pointer;
   color: #bdb8d6;
+  font-size: 1em;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 .wrapper .sidebar ul li a {
   color: #bdb8d6;
@@ -183,13 +186,30 @@ export default {
   color: #bdb8d6;
 }
 .wrapper .sidebar ul li:hover {
-  background: #594f8d;
+  background: #fff;
+  color: #413968;
+  font-size: 1.5em;
 }
 .wrapper .sidebar ul li:hover a {
   color: #fff;
 }
 .wrapper .sidebar ul li:hover a .fa {
   color: #fff;
+}
+.facebook:hover {
+  background: #0000ff;
+  color: #fff;
+  font-size: 1.5em;
+}
+.instagram:hover {
+  background: #00ff00;
+  color: #fff;
+  font-size: 1.5em;
+}
+.linkedin:hover {
+  background: #ff0000;
+  color: #fff;
+  font-size: 1.5em;
 }
 .wrapper .sidebar .social-media {
   position: absolute;

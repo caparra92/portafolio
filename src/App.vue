@@ -39,13 +39,11 @@ export default {
   },
   props: {},
   methods: {
-    async translateLeft () {
+    translateLeft () {
       this.$refs.mainContent.className = 'main-content'
-      await console.log('Traslado recibido')
     },
     returnLeft () {
       this.$refs.mainContent.className = 'main'
-      console.log('retorno recibido')
     }
   }
 }
@@ -77,6 +75,14 @@ p {
 }
 .main-content {
   margin-left: 20%;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+.main {
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 .container {
   margin: 5px;
