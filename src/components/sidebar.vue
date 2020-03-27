@@ -34,14 +34,14 @@
           </a>
         </ul>
         <div class="social-media">
-          <a href="#">
-            <i class="fa fa-facebook-f facebook"></i>
+          <a href="#" class="facebook">
+            <i class="fa fa-facebook-f"></i>
           </a>
-          <a href="#">
-            <i class="fa fa-instagram instagram"></i>
+          <a href="#" class="instagram">
+            <i class="fa fa-instagram"></i>
           </a>
-          <a href="#">
-            <i class="fa fa-linkedin linkedin"></i>
+          <a href="#" class="linkedin">
+            <i class="fa fa-linkedin"></i>
           </a>
         </div>
       </div>
@@ -235,13 +235,29 @@ export default {
 .wrapper .sidebar .social-media a .fa {
   color: #fff;
 }
-.wrapper .sidebar .social-media:hover a {
+.wrapper .sidebar .social-media:hover a:nth-child(1) {
   width: 45px;
   height: 45px;
   padding-top: 5px;
-  color: #bdb8d6;
-  font-size: 25px;
-  background: #5f5594;
+  color: #fff;
+  font-size: 1.5em;
+  background: #3d559d;
+}
+.wrapper .sidebar .social-media:hover a:nth-child(2) {
+  width: 45px;
+  height: 45px;
+  padding-top: 5px;
+  color: #fff;
+  font-size: 1.5em;
+  background: #8a3ab9;
+}
+.wrapper .sidebar .social-media:hover a:nth-child(3) {
+  width: 45px;
+  height: 45px;
+  padding-top: 5px;
+  color: #fff;
+  font-size: 1.5em;
+  background: #000;
 }
 .wrapper .main-content {
   width: 100%;

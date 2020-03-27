@@ -5,25 +5,25 @@
     <ul class="list-items">
       <li>
         <figure>
-          <img src="#" alt="laravel" width="100px" height="100px" />
+          <img :src="require('../assets/laravel.png')" alt="laravel" width="100px" height="100px" />
           <figcaption>Laravel</figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src="#" alt="javascript" width="100px" height="100px" />
+          <img :src="require('../assets/javascript.png')" alt="javascript" width="100px" height="100px" />
           <figcaption>Javascript</figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src="#" alt="java" width="100px" height="100px" />
+          <img :src="require('../assets/java.png')" alt="java" width="100px" height="100px" />
           <figcaption>Java</figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src="#" alt="Html5" width="100px" height="100px" />
+          <img :src="require('../assets/html5.png')" alt="Html5" width="100px" height="100px" />
           <figcaption>HTML5</figcaption>
         </figure>
       </li>
