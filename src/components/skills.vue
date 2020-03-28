@@ -28,15 +28,20 @@
         </figure>
       </li>
     </ul>
-    <p>Contact us for futher information about what of these you should choose.</p>
-    <p>You can get more details in the contact section.</p>
+    <p v-text="p1"></p>
+    <p>You can get more details in the contact section or click <a href="#contact" class="here">here</a></p>
   </section>
 </template>
 
 <script>
 export default {
   name: 'Skills',
-  props: {}
+  props: {
+    p1: {
+      type: String,
+      default: 'Contact us for futher information about what of these you should choose.'
+    }
+  }
 }
 </script>
 
@@ -46,5 +51,16 @@ export default {
   background: #5f5594;
   color: #fff;
   height: 100vh;
+}
+
+.here {
+  font-size: 1em;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+}
+
+.here:hover {
+  font-size: 1.3em;
 }
 </style>

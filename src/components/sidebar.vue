@@ -169,7 +169,7 @@ export default {
   border-top: 1px solid rgba(225, 225, 225, 0.05);
   left: 25px;
   cursor: pointer;
-  color: #bdb8d6;
+  color: #fff;
   font-size: 1em;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;

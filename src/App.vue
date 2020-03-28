@@ -73,6 +73,9 @@ figure {
 p {
   margin-bottom: 40px;
 }
+a {
+  color: #fff;
+}
 .main-content {
   margin-left: 20%;
   transition: all 0.25s;
