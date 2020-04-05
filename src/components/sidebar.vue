@@ -22,7 +22,7 @@
               <i class="fa fa-folder"></i>Projects
             </li>
           </a>
-          <a href="#skills">
+          <a data-page="skills" href="#skills">
             <li class="list">
               <i class="fa fa-tasks"></i>Skills
             </li>
@@ -113,10 +113,12 @@ export default {
   position: fixed;
   width: 35px;
   font-size: 3em;
-  color: #413968;
+  color: #685e97;
   cursor: pointer;
   border: none;
   background: none;
+  -webkit-text-stroke: 1px #fff;
+  z-index: -1;
   transition: all 0.5s;
   -webkit-transition: all 0.25s;
 }
@@ -137,6 +139,7 @@ export default {
   background: none;
   text-align: right;
   position: relative;
+  z-index: 1;
   transition: all 0.35s;
   -webkit-transition: all 0.25s;
 }
@@ -147,6 +150,7 @@ export default {
 .wrapper {
   display: flex;
   position: relative;
+  z-index: 1;
 }
 .wrapper .sidebar {
   /* display: none; */

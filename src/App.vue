@@ -91,11 +91,6 @@ a {
   margin: 5px;
   margin-bottom: 20px;
 }
-.list-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .title {
   margin-bottom: 40px;
   font-size: 60px;

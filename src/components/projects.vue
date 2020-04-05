@@ -5,7 +5,7 @@
     <p class="textImg" v-text="gitHub"></p>
     <figure>
         <a href="https://github.com/caparra92" target="blank" >
-          <img :src="require('../assets/github.png')" alt="Github" width="100px" height="100px" class="git" />
+          <img :src="require('../assets/github.png')" alt="Github" width="80px" height="80px" class="git" />
         </a>
     </figure>
   </section>
@@ -30,14 +30,23 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .project {
-  max-width: 1055px;
+  background: #5f5594;
+  color: #fff;
   margin: 0 auto;
   height: 100vh;
 }
 
+.project p {
+  position: relative;
+  max-width: 850px;
+  text-align: justify;
+  left: 20%;
+}
+
 .git {
   position: relative;
-  margin-left: 55px;
+  margin-left: 15px;
+  margin-top: 50px;
   left: 65px;
   bottom: 140px;
   transition: all 0.25s;
@@ -46,15 +55,12 @@ export default {
 }
 
 .git:hover {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   border: none;
 }
 
 .textImg {
-  width: 50%;
-  position: relative;
-  left: 40px;
-  top: 10px;
+  margin-right: 200px;
 }
 </style>
