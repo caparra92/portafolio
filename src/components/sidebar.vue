@@ -9,27 +9,27 @@
         <ul>
           <a href="#header">
             <li class="list">
-              <i class="fa fa-home"></i>Home
+              Home
             </li>
           </a>
           <a href="#about">
             <li class="list">
-              <i class="fa fa-user"></i>About
+              About
             </li>
           </a>
           <a href="#project">
             <li class="list">
-              <i class="fa fa-folder"></i>Projects
+              Projects
             </li>
           </a>
           <a data-page="skills" href="#skills">
             <li class="list">
-              <i class="fa fa-tasks"></i>Skills
+              Skills
             </li>
           </a>
           <a href="#contact">
             <li class="list">
-              <i class="fa fa-address-book"></i>Contact
+              Contact
             </li>
           </a>
         </ul>

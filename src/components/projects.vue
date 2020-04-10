@@ -30,8 +30,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .project {
-  background: #5f5594;
-  color: #fff;
   margin: 0 auto;
   height: 100vh;
 }

@@ -1,7 +1,8 @@
 <template>
   <header class="header" id="header">
     <div class="name">
-      <h1 data-text="<Web developer/>">.Web developer.</h1>
+      <h1>camilo parra</h1>
+      <h4 data-text='web developer'>web developer</h4>
     </div>
     <!-- <div class="layer"></div> -->
   </header>
@@ -24,7 +25,7 @@ export default {
 header {
   height: 100vh;
   padding: 20px;
-  background-image: linear-gradient(rgba(81, 17, 185, 0.8), rgba(0,0,0,0.9)), url('../assets/webdev.jpg');
+  background-image: linear-gradient(rgba(136, 92, 207, 0.8), rgba(0,0,0,0.9)), url('../assets/webdev.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 1px solid #e0e4e8;
@@ -32,23 +33,36 @@ header {
 
 .name {
   position: relative;
-  font-size: 1em;
-  top: 50%;
+  font-size: 2em;
+  top: -5em;
   left: 50%;
   margin: 0;
   padding: 0;
   transform: translate(-50%,-50%);
   text-transform: uppercase;
-  color: transparent;
+  color: #fff;
+  animation: fall 2s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation-delay: 0.8s;
+  /* color: transparent; */
 }
 
-h1 {
+h1 h2{
   position: relative;
   display: inline;
   letter-spacing: 5px;
 }
 
-h1:before {
+h2 {
+  animation-delay: 1s;
+}
+
+@keyframes fall {
+  100% {
+    top: 50%;
+  }
+}
+
+/* h2:before {
   position: absolute;
   content: attr(data-text);
   top: 0;
@@ -78,7 +92,7 @@ h1:before {
     width: 0;
   }
 }
-
+ */
 /* .layer {
   position: absolute;
   width: 100%;

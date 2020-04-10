@@ -5,8 +5,19 @@
       <Header />
       <Section />
       <Projects />
-      <Skills />
-      <Contact />
+      <Skills>
+        <p class="line">Contact us for futher information about what of these you should choose<br></p>
+          You can get more details in the contact section or click
+          <a href="#contact" class="here">here</a>
+      </Skills>
+      <Contact>
+        <p>
+          You can contact me for email through caparra92@gmail.com or in the social media section below the menu
+        </p>
+        <p slot="textLine">You can call me on +55 (43) 991-739-069 if you want to get in touch more quickly.
+          (The country code is not necessary if you live in Brazil)
+        </p>
+      </Contact>
       <Footer />
     </div>
   </div>
@@ -71,7 +82,7 @@ figure {
   padding: 10px;
 }
 p {
-  margin-bottom: 40px;
+  margin-bottom: 2em;
 }
 a {
   color: #fff;
@@ -95,6 +106,11 @@ a {
   margin-bottom: 40px;
   font-size: 60px;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+.line {
+  margin-bottom: 1em;
 }
 #app {
   font-family: 'Josefin Sans' sans-serif;

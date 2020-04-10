@@ -3,7 +3,7 @@
     <h1 class="title">Skills</h1>
     <p>What would you like for your next project? These are some awesome tecnologies for your website or information system</p>
     <div class="slider">
-      <ul class="list-items" ref="slider" @click="slide">
+      <ul class="list-items" ref="slider">
         <li>
           <Card image="laravel.png" title="Laravel" description="Laravel PHP framework" ref="card1"></Card>
         </li>
@@ -16,7 +16,14 @@
           ></Card>
         </li>
         <li>
-          <Card image="java.png" title="Java" description="Web and native apps" ref="card3"></Card>
+          <Card
+            image="java.png"
+            title="Java"
+            description="Web and native apps"
+            ref="card3"
+            :addTop="true"
+            >
+          </Card>
         </li>
         <li>
           <Card
@@ -32,6 +39,7 @@
             title="Jquery"
             description="Quickly and easy web interactions"
             ref="card5"
+            :addTop="true"
           ></Card>
         </li>
         <li>
@@ -39,7 +47,9 @@
             image="npm.png"
             title="NPM"
             description="Package manager for nodejs"
-            ref="card6">
+            ref="card6"
+            :addTop="true"
+            >
           </Card>
         </li>
         <li>
@@ -47,7 +57,8 @@
             image="github.png"
             title="GitHub"
             description="Version control system"
-            ref="card7">
+            ref="card7"
+            >
           </Card>
         </li>
         <li>
@@ -64,6 +75,7 @@
             title="Ajax"
             description="Asyncronous javascript and XML"
             ref="card9"
+            :addTop="true"
           ></Card>
         </li>
         <li>
@@ -72,6 +84,7 @@
             title="PHP"
             description="Program language for the server side"
             ref="card10"
+            :addTop="true"
           ></Card>
         </li>
         <li>
@@ -108,11 +121,7 @@
         </li>
       </ul>
     </div>
-    <p v-text="p1"></p>
-    <p>
-      You can get more details in the contact section or click
-      <a href="#contact" class="here">here</a>
-    </p>
+    <slot></slot>
   </section>
 </template>
 
@@ -125,11 +134,6 @@ export default {
     Card
   },
   props: {
-    p1: {
-      type: String,
-      default:
-        'Contact us for futher information about what of these you should choose.'
-    }
   },
   methods: {
     slide () {
@@ -145,7 +149,6 @@ export default {
 <style scoped>
 .skills {
   margin: 0 auto;
-  background: #fff;
   height: 100vh;
 }
 
@@ -173,13 +176,14 @@ export default {
 .slider {
   width: 75%;
   margin: auto;
+  padding-bottom: .3em;
   overflow: hidden;
 }
 
 .list-items {
   display: flex;
   width: 300%;
-  padding: 0;
+  padding: .2em 0;
   animation: slider 20s infinite alternate cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
@@ -190,6 +194,13 @@ export default {
 
 .list-items li {
   width: auto;
+}
+
+.add-space {
+  position: relative;
+  padding-top: 3em;
+  margin: 2em 0;
+  top: 50%;
 }
 
 @keyframes slider {

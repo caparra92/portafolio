@@ -1,6 +1,6 @@
 <template>
   <div class='card'>
-    <img :src="require('../assets/'+image)" alt=image ref="image"/>
+    <img :src="require('../assets/'+image)" alt=image ref="image" :class="{ 'add-top' : addTop}" />
     <div class='card-container'>
       <h1 class='card-title'><b>{{title}}</b></h1>
       <p v-text='description'></p>
@@ -23,6 +23,10 @@ export default {
     description: {
       type: String,
       default: 'Image description'
+    },
+    addTop: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -34,7 +38,7 @@ export default {
   width: 10em;
   height: 20em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 0 .5em;
+  padding: .2em .5em;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   margin: 0 .9em;
 }
