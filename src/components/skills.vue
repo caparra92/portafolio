@@ -232,4 +232,62 @@ export default {
     margin-left: -200%;
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 736px){
+  .skills {
+  margin: 0 auto;
+  height: 100vh;
+  }
+
+  .here {
+    color: black;
+    font-size: 1em;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+  }
+
+.here:hover {
+  font-size: 1.3em;
+}
+
+.btn {
+  position: absolute;
+  font-size: 0.5em;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.slider {
+  width: 75%;
+  margin: auto;
+  padding-bottom: .3em;
+  overflow: hidden;
+}
+
+.list-items {
+  display: flex;
+  width: 300%;
+  padding: .2em 0;
+  animation: slider 20s infinite alternate cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.list-items:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+.list-items li {
+  width: auto;
+}
+
+.add-space {
+  position: relative;
+  padding-top: 3em;
+  margin: 2em 0;
+  top: 50%;
+}
+}
 </style>

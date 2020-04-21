@@ -273,4 +273,25 @@ export default {
   color: #717171;
   border-bottom: 1px solid #e0e4e8;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 736px){
+  .wrapper .sidebar {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background: #413968;
+    box-shadow: 5px 5px 10px grey;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+  }
+
+  #closeBtn {
+    left: 40%;
+}
+
+.wrapper .sidebar ul li {
+  display: block;
+  padding: 1em;
+}
+}
 </style>

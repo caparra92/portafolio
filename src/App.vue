@@ -6,9 +6,8 @@
       <Section />
       <Projects />
       <Skills>
-        <p class="line">Contact us for futher information about what of these you should choose<br></p>
-          You can get more details in the contact section or click
-          <a href="#contact" class="here">here</a>
+        <a href="#contact" class="btn-custom"><i class="fa fa-book"></i>Contact</a>
+        <a href="#contact" class="btn-custom"><i class="fa fa-user"></i>Resume</a>
       </Skills>
       <Contact>
         <p>
@@ -112,11 +111,38 @@ a {
 .line {
   margin-bottom: 1em;
 }
+
+.btn-custom {
+  position: relative;
+  display: inline;
+  top: 2em;
+  color: #2c3e50;
+  padding: 0.5em;
+  margin: 0.5em;
+  background: #fff;
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 5px;
+}
+
+.btn-custom .fa {
+  padding: 0.2em;
+}
+
+.btn-custom:hover {
+  background: #f3f5f9;
+}
+
 #app {
   font-family: 'Josefin Sans' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+@media screen and (max-width: 600px) {
+  .main-content {
+    margin: 0;
+  }
 }
 </style>

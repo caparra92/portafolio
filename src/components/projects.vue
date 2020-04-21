@@ -61,4 +61,32 @@ export default {
 .textImg {
   margin-right: 200px;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 736px){
+  .project {
+    margin: 0 auto;
+    height: 100vh;
+  }
+
+  .project p {
+    position: relative;
+    max-width: 23em;
+    text-align: justify;
+    left: 10%;
+    padding-right: 3.3em;
+  }
+
+  .git {
+    display: none;
+  }
+
+  .textImg {
+    position: relative;
+    max-width: 23em;
+    text-align: justify;
+    left: 10%;
+    padding-right: 3.3em;
+    margin-right: 0;
+  }
+}
 </style>

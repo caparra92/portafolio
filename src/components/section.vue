@@ -52,4 +52,31 @@ h2 {
   max-width: 23em;
   transform: translate(14em,3em);
 }
+
+@media only screen and (min-width: 320px) and (max-width: 736px){
+  .about img {
+    display: none;
+  }
+
+  h1 {
+    left: 10%;
+  }
+
+  h2 {
+    width: 100%;
+    transform: translateX(10%);
+    position: relative;
+  }
+
+  .about p {
+    display: flex;
+    float: left;
+    padding:0;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 10px;
+    max-width: 23em;
+    transform: translate(2.1em,3em);
+  }
+}
 </style>

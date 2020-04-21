@@ -93,15 +93,15 @@ h2 {
   }
 }
  */
-/* .layer {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  padding: 20px;
-  background: #000;
-  opacity: 0.5;
-} */
+@media only screen and (min-width: 320px) and (max-width: 736px){
+
+  header {
+    padding: 0;
+  }
+
+  .name {
+    font-size: 1em;
+  /* color: transparent; */
+  }
+}
 </style>
