@@ -53,7 +53,7 @@ h2 {
   transform: translate(14em,3em);
 }
 
-@media only screen and (min-width: 320px) and (max-width: 736px){
+@media only screen and (min-width: 320px) and (max-width: 768px){
   .about img {
     display: none;
   }
@@ -66,6 +66,7 @@ h2 {
     width: 100%;
     transform: translateX(10%);
     position: relative;
+    margin-top: -1em;
   }
 
   .about p {
@@ -74,7 +75,8 @@ h2 {
     padding:0;
     margin: 0 auto;
     text-align: justify;
-    margin-bottom: 10px;
+    margin-bottom: 1.7em;
+    margin-top: -1.5em;
     max-width: 23em;
     transform: translate(2.1em,3em);
   }

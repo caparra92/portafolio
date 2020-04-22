@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="menu">
-      <button id="toggle" @click="onTranslate">|||</button>
+      <button id="toggle" ref="menu" @click="onTranslate" @scroll="fixedMenu">|||</button>
     </div>
     <transition name="fade">
       <div class="sidebar" id="sideBar" v-if="show">
@@ -74,6 +74,9 @@ export default {
       this.show = false
       this.translate = false
       this.$emit('onReturn', this.translate)
+    },
+    fixedMenu () {
+      this.$refs.menu.className = 'fixedMenu'
     }
   }
 }
@@ -274,20 +277,36 @@ export default {
   border-bottom: 1px solid #e0e4e8;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 736px){
+@media only screen and (min-width: 320px) and (max-width: 768px){
   .wrapper .sidebar {
     position: fixed;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     background: #413968;
     box-shadow: 5px 5px 10px grey;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
   }
+  .menu {
+    position: fixed;
+    margin-top: 0;
+  }
+
+  #toggle {
+    font-size: 2em;
+  }
+
+  .fixedMenu {
+    position: fixed;
+    margin-top: 30px;
+    background: red;
+  }
 
   #closeBtn {
     left: 40%;
-}
+    padding-top: 0;
+    margin-top: 0;
+  }
 
 .wrapper .sidebar ul li {
   display: block;

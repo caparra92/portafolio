@@ -80,8 +80,11 @@ body {
 figure {
   padding: 10px;
 }
+
 p {
-  margin-bottom: 2em;
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 a {
   color: #fff;
@@ -140,9 +143,14 @@ a {
   color: #2c3e50;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .main-content {
     margin: 0;
+  }
+
+  p {
+    font-size: 0.8em;
+    margin: 0 1.5em;
   }
 }
 </style>

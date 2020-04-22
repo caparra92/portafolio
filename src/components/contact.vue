@@ -129,4 +129,22 @@ export default {
   top: 1.5em;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px){
+
+h1 {
+  margin-top: 3em;
+  padding-top: 10px;
+}
+.form {
+  position: inherit;
+  float: none;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.panel {
+  display: none;
+}
+}
 </style>

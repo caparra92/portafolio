@@ -135,13 +135,7 @@ export default {
   },
   props: {
   },
-  methods: {
-    slide () {
-      const slider = this.$refs.slider
-      const img = slider.childNodes[0].children[0].children[0]
-      console.log(img.style)
-    }
-  }
+  methods: {}
 }
 </script>
 
@@ -233,10 +227,14 @@ export default {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 736px){
+@media only screen and (min-width: 320px) and (max-width: 768px){
   .skills {
   margin: 0 auto;
   height: 100vh;
+  }
+
+  p {
+    margin-bottom: 1.5em;
   }
 
   .here {

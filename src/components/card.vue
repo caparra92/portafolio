@@ -63,4 +63,33 @@ export default {
   top: 50%;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px){
+.card {
+  width: 8em;
+  height: 15em;
+  padding: .2em .2em;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-container {
+  padding: 2px 8px;
+  font-size: 0.8em;
+}
+
+.add-top {
+  position: relative;
+  padding-top: 1em;
+  margin: 1em 0;
+  top: 50%;
+}
+
+}
+
 </style>

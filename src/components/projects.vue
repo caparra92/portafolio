@@ -38,7 +38,6 @@ export default {
   position: relative;
   max-width: 850px;
   text-align: justify;
-  left: 20%;
 }
 
 .git {
@@ -62,18 +61,14 @@ export default {
   margin-right: 200px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 736px){
+@media only screen and (min-width: 320px) and (max-width: 768px){
   .project {
     margin: 0 auto;
     height: 100vh;
   }
 
   .project p {
-    position: relative;
-    max-width: 23em;
     text-align: justify;
-    left: 10%;
-    padding-right: 3.3em;
   }
 
   .git {
@@ -81,12 +76,8 @@ export default {
   }
 
   .textImg {
-    position: relative;
-    max-width: 23em;
     text-align: justify;
-    left: 10%;
-    padding-right: 3.3em;
-    margin-right: 0;
+    margin-right: 24px;
   }
 }
 </style>
