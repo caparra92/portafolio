@@ -33,4 +33,19 @@ export default {
   text-align: center;
   left: 45%;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 768px){
+
+.footer p {
+  width: 100%;
+  margin: 0;
+  margin-top: 2em;
+  padding: 0;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  left: 0;
+}
+}
+
 </style>
