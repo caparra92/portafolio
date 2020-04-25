@@ -146,6 +146,12 @@ export default {
   height: 100vh;
 }
 
+p {
+  margin: 0 auto;
+  max-width: 80%;
+  margin-bottom: 30px;
+}
+
 .here {
   color: black;
   font-size: 1em;

@@ -41,6 +41,7 @@ export default {
   padding: .2em .5em;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   margin: 0 .9em;
+  margin-top: 10px;
 }
 
 .card:hover {

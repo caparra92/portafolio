@@ -2,12 +2,7 @@
   <section class="container project" id="project">
     <h1 class="title">Projects</h1>
     <p v-text="p1"></p>
-    <p class="textImg" v-text="gitHub"></p>
-    <figure>
-        <a href="https://github.com/caparra92" target="blank" >
-          <img :src="require('../assets/github.png')" alt="Github" width="80px" height="80px" class="git" />
-        </a>
-    </figure>
+    <p class="git">Check my <a href="https://github.com/caparra92" target="blank" >GitHub </a>profile for contributions and tips, i really like to learn of other expertise developers and clients, thanks for your help!</p>
   </section>
 </template>
 
@@ -21,7 +16,7 @@ export default {
     },
     gitHub: {
       type: String,
-      default: 'Check my GitHub profile for contributions and tips, i really like to learn of other expertise developers and clients, thanks for your help!'
+      default: ''
     }
   }
 }
@@ -35,30 +30,22 @@ export default {
 }
 
 .project p {
+  margin: 0 auto;
   position: relative;
-  max-width: 850px;
+  max-width: 80%;
   text-align: justify;
+  margin-bottom: 15px;
 }
 
-.git {
-  position: relative;
-  margin-left: 15px;
-  margin-top: 50px;
-  left: 65px;
-  bottom: 140px;
+.git a {
+  color: black;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
 }
 
-.git:hover {
-  width: 100px;
-  height: 100px;
-  border: none;
-}
-
-.textImg {
-  margin-right: 200px;
+.git a:hover {
+  color: #6b6969;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px){
