@@ -105,6 +105,7 @@ a {
   margin-bottom: 20px;
 }
 .title {
+  margin: 0 auto;
   margin-bottom: 40px;
   font-size: 60px;
   text-transform: uppercase;

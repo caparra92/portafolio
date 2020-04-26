@@ -277,7 +277,7 @@ export default {
   border-bottom: 1px solid #e0e4e8;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px){
+@media all and (min-width: 320px) and (max-width: 768px){
   .wrapper .sidebar {
     position: fixed;
     width: 100vw;

@@ -1,5 +1,5 @@
 <template>
-  <section class="container skills" id="skills">
+  <section class="skills" id="skills">
     <h1 class="title">Skills</h1>
     <p>What would you like for your next project? These are some awesome tecnologies for your website or information system</p>
     <div class="slider">
@@ -233,7 +233,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px){
+@media all and (min-width: 320px) and (max-width: 768px){
   .skills {
   margin: 0 auto;
   height: 100vh;

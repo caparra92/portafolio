@@ -1,5 +1,5 @@
 <template>
-  <section class="container project" id="project">
+  <section class="project" id="project">
     <h1 class="title">Projects</h1>
     <p v-text="p1"></p>
     <p class="git">Check my <a href="https://github.com/caparra92" target="blank" >GitHub </a>profile for contributions and tips, i really like to learn of other expertise developers and clients, thanks for your help!</p>
@@ -48,7 +48,7 @@ export default {
   color: #6b6969;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px){
+@media all and (min-width: 320px) and (max-width: 768px){
   .project {
     margin: 0 auto;
     height: 100vh;

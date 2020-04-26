@@ -1,5 +1,5 @@
 <template>
-  <section class="container contact" id="contact">
+  <section class="contact" id="contact">
     <article class="article">
       <h1 class="title" v-text="title"></h1>
       <div class="form">
@@ -129,7 +129,7 @@ export default {
   top: 1.5em;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px){
+@media all and (min-width: 320px) and (max-width: 768px){
 
 h1 {
   margin-top: 3em;

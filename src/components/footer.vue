@@ -34,7 +34,7 @@ export default {
   left: 45%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px){
+@media all and (min-width: 320px) and (max-width: 768px){
 
 .footer p {
   width: 100%;
