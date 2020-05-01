@@ -1,7 +1,7 @@
 <template>
   <section class="contact" id="contact">
-    <article class="article">
-      <h1 class="title" v-text="title"></h1>
+    <h1 class="title" v-text="title"></h1>
+    <div class="article">
       <div class="form">
         <slot></slot>
         <p>
@@ -10,19 +10,21 @@
         </p>
         <slot name="textLine"></slot>
       </div>
-      <div class="panel">
-        <li class="fa fa-facebook"></li>
-        <li class="fa fa-instagram"></li>
-        <li class="fa fa-linkedin"></li>
-        <li class="fa fa-envelope"></li>
+      <div class="contact-form">
+        <FormContact/>
       </div>
-    </article>
+    </div>
   </section>
 </template>
 
 <script>
+import FormContact from './formContact'
+
 export default {
   name: 'Contact',
+  components: {
+    FormContact
+  },
   props: {
     title: {
       type: String,
@@ -77,56 +79,27 @@ export default {
   height: 100vh;
 }
 
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .contact p {
   color: #000;
   padding: 1em;
 }
 
 .form {
-  position: relative;
-  float: left;
+  margin: 0 auto;
   background: #fff;
-  max-width: 22em;
-  left: 7em;
-  top: 1em;
+  width: 50%;
   border-radius: 0.3em;
 }
 
-.panel {
-  position: absolute;
-  width: 50%;
-}
-
-.panel .fa {
-  font-size: 5em;
-  transition: all .5s ease-out;
-}
-
-.panel .fa-facebook{
-  position: absolute;
-  color: #3d559d;
-  left: 9em;
-}
-
-.panel .fa-instagram{
-  position: absolute;
-  color: #8a3ab9;
-  left: 10.5em;
-  top: 2em;
-}
-
-.panel .fa-linkedin{
-  position: absolute;
-  color: #000;
-  left: 7em;
-  top: 1.5em;
-}
-
-.panel .fa-envelope{
-  position: absolute;
-  color: rgb(238, 36, 36);
-  left: 8.5em;
-  top: 1.5em;
+.contact-form {
+  width: 40%;
+  margin: 0 auto;
 }
 
 @media all and (min-width: 320px) and (max-width: 768px){
@@ -135,16 +108,28 @@ h1 {
   margin-top: 3em;
   padding-top: 10px;
 }
+
+.article {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 .form {
+  display: none;
+  /* width: 80%;
   position: inherit;
   float: none;
   display: block;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 auto; */
 }
 
-.panel {
-  display: none;
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
 }
+
 }
 </style>
