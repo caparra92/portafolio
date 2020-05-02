@@ -34,13 +34,13 @@
           </a>
         </ul>
         <div class="social-media">
-          <a href="#" class="facebook">
+          <a href="https://www.facebook.com/galoabolicao" target="_blank" class="facebook">
             <i class="fa fa-facebook-f"></i>
           </a>
-          <a href="#" class="instagram">
+          <a href="https://www.instagram.com/camilo_parra_galo/" target="_blank" class="instagram">
             <i class="fa fa-instagram"></i>
           </a>
-          <a href="#" class="linkedin">
+          <a href="https://www.linkedin.com/in/parra-camilo/" target="_blank" class="linkedin">
             <i class="fa fa-linkedin"></i>
           </a>
         </div>
@@ -110,6 +110,7 @@ export default {
   color:#fff;
 }
 #toggle {
+  outline: none;
   top: 30px;
   left: 30px;
   font-weight: 800;
@@ -132,6 +133,7 @@ export default {
   -webkit-text-stroke: 1px #000;
 }
 #closeBtn {
+  outline: none;
   padding: 0;
   left: 20%;
   top: -5px;
@@ -280,12 +282,16 @@ export default {
 @media all and (min-width: 320px) and (max-width: 768px){
   .wrapper .sidebar {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 50%;
+    height: 100%;
     background: #413968;
     box-shadow: 5px 5px 10px grey;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
+  }
+
+  .wrapper .sidebar ul li:hover {
+    font-size: 1.2em;
   }
   .menu {
     position: fixed;
@@ -306,6 +312,7 @@ export default {
     left: 40%;
     padding-top: 0;
     margin-top: 0;
+    margin-right: 20px;
   }
 
 .wrapper .sidebar ul li {

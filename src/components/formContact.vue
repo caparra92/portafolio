@@ -44,6 +44,7 @@ export default {
         padding: 15px 0;
         width: 80%;
         margin: 20px;
+        color: #2c3e50;
         transition: all 300ms;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
@@ -69,5 +70,37 @@ export default {
 
     .btnForm:hover {
         background: #50467e;
+    }
+    @media all and (min-width: 320px) and (max-width: 768px){
+
+    form {
+        margin-bottom: 40px;
+        padding-bottom: 5px;
+        height: 100%;
+    }
+    .info {
+        padding: 15px 0;
+        width: 100%;
+        height: 3.5em;
+        margin: 5px;
+    }
+    .info:nth-child(4) {
+        height: 10em;
+    }
+    .info:focus {
+        border-bottom: #610061;
+    }
+
+    .btnForm {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+        height:3em;
+    }
+
+    .btnForm:focus {
+        background: #50467e;
+    }
+
     }
 </style>

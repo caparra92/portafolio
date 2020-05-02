@@ -1,7 +1,7 @@
 <template>
   <div id='app'>
     <Sidebar @onTranslate = translateLeft @onReturn = returnLeft />
-    <div ref="mainContent">
+    <div ref="mainContent" @onReturn = returnLeft>
       <Header />
       <Section />
       <Projects />
@@ -45,6 +45,7 @@ export default {
   data () {
     return {
       mainContent: 'main-content'
+      // pdfLink: require('./assets/resume.pdf')
     }
   },
   props: {},
@@ -152,6 +153,10 @@ a {
   p {
     font-size: 0.8em;
     margin: 0 1.5em;
+  }
+
+  .title {
+    margin-bottom: 30px;
   }
 }
 </style>
