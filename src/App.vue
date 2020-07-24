@@ -1,7 +1,7 @@
 <template>
   <div id='app'>
     <Sidebar @onTranslate = translateLeft @onReturn = returnLeft />
-    <div ref="mainContent" @onReturn = returnLeft>
+    <div ref="mainContent">
       <Header />
       <Section />
       <Projects />
