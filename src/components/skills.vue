@@ -2,7 +2,7 @@
   <section class="skills" id="skills">
     <h1 class="title">Skills</h1>
     <p>What would you like for your next project? These are some awesome tecnologies for your website or information system</p>
-    <div class="slider">
+    <div class="w-2/3 h-auto lg:overflow-hidden overflow-x-scroll overflow-y-hidden m-auto pt-5">
       <ul class="list-items" ref="slider">
         <li>
           <Card image="laravel.png" title="Laravel" description="Laravel PHP framework" ref="card1"></Card>

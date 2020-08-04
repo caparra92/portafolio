@@ -56,6 +56,10 @@ h2 {
   animation-delay: 1s;
 }
 
+h4 {
+  font-size: 1.5em;
+}
+
 @keyframes fall {
   100% {
     top: 50%;

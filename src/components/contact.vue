@@ -1,16 +1,16 @@
 <template>
-  <section class="contact" id="contact">
+  <section class="my-0 mx-auto" id="contact">
     <h1 class="title" v-text="title"></h1>
-    <div class="article">
-      <div class="form">
+    <div class="md:flex md:flex-row sm:flex sm:flex-col justify-between items-center">
+      <div class="sm:w-full my-0 lg:mx-auto bg-white md:w-1/2 xs:w-full rounded-sm px-5 mx-5">
         <slot></slot>
-        <p>
+        <p class="py-4 text-black">
           <i class="fa fa-clock-o"></i>
           {{calcTime(city,zone) + contactP2}}
         </p>
         <slot name="textLine"></slot>
       </div>
-      <div class="contact-form">
+      <div class="md:w-1/3 sm:w-full my-0 mx-auto md:px-2 sm:px-5">
         <FormContact/>
       </div>
     </div>
@@ -36,11 +36,11 @@ export default {
     },
     city: {
       type: String,
-      default: 'Londrina'
+      default: 'Bogotá'
     },
     zone: {
       type: String,
-      default: '-3'
+      default: '-5'
     },
     calcTime: {
       type: Function,
@@ -74,33 +74,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.contact {
-  margin: 0 auto;
-  height: 100vh;
-}
-
-.article {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contact p {
-  color: #000;
-  padding: 1em;
-}
-
-.form {
-  margin: 0 auto;
-  background: #fff;
-  width: 50%;
-  border-radius: 0.3em;
-}
-
-.contact-form {
-  width: 40%;
-  margin: 0 auto;
-}
 
 @media all and (min-width: 320px) and (max-width: 768px){
 

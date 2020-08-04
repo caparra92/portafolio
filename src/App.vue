@@ -6,15 +6,13 @@
       <Section />
       <Projects />
       <Skills>
-        <a href="#contact" class="btn-custom"><i class="fa fa-book"></i>Contact</a>
-        <a href="#contact" class="btn-custom"><i class="fa fa-user"></i>Resume</a>
       </Skills>
       <Contact>
         <p>
           You can contact me for email through caparra92@gmail.com or in the social media section below the menu
         </p>
         <p slot="textLine">You can call me on +55 (43) 991-739-069 if you want to get in touch more quickly.
-          (The country code is not necessary if you live in Brazil)
+          (The country code is not necessary if you live in Colombia)
         </p>
       </Contact>
       <Footer />
