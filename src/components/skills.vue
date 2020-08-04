@@ -275,7 +275,7 @@ p {
   display: flex;
   width: 300%;
   padding: .2em 0;
-  animation: slider 20s infinite alternate cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  animation: none;
 }
 
 .list-items:hover {
