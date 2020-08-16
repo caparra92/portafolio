@@ -58,16 +58,10 @@ export default {
         .send('gmail', 'contactEmail', data)
         .then((res) => {
           this.$refs.formEmail.reset()
-          console.log('email enviado')
         })
         .catch((error) => {
-          console.log(error)
+          throw error
         })
-    },
-    resetForm () {
-      this.name = ''
-      this.email = ''
-      this.message = ''
     }
   }
 }
