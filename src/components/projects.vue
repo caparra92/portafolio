@@ -7,7 +7,7 @@
       <div class="row flex">
         <a href="http://deleite.domipan.co" target="_blank">
           <Card
-            class="card col-sm-12 text-black"
+            class="card col-sm-12 text-grey-900"
             image="deleite.png"
             title="deleite.domipan.co"
             description="Information system mades with Laravel and Ajax"
@@ -16,7 +16,7 @@
         </a>
         <a href="https://parracamilo.tk" target="_blank">
           <Card
-            class="card col-sm-12"
+            class="card col-sm-12 text-grey-900"
             image="portafolio.png"
             title="parracamilo.tk"
             description="This portafolio mades with vuejs and tailwind css"
@@ -25,7 +25,7 @@
         </a>
         <a href="https://appmoda.netlify.app" target="_blank">
           <Card
-            class="card col-sm-12"
+            class="card col-sm-12 text-grey-900"
             image="appmoda.png"
             title="appmoda.netlify.app"
             description="Eccommerce made with vuejs and vuetify framework"
