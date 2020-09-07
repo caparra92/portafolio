@@ -7,7 +7,7 @@
       <div class="row flex">
         <a href="http://deleite.domipan.co" target="_blank">
           <Card
-            class="card col-sm-12"
+            class="card col-sm-12 text-black"
             image="deleite.png"
             title="deleite.domipan.co"
             description="Information system mades with Laravel and Ajax"
