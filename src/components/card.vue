@@ -2,7 +2,7 @@
   <div class='card'>
     <img :src="require('../assets/'+image)" alt=image ref="image" :class="{ 'add-top' : addTop}" />
     <div class='card-container'>
-      <h1 class='card-title'><b>{{title}}</b></h1>
+      <h1 class='card-title pt-2 font-bold'><b>{{title}}</b></h1>
       <p v-text='description'></p>
     </div>
   </div>
@@ -35,8 +35,8 @@ export default {
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
 .card {
-  width: 10em;
-  height: 20em;
+ /*  width: 10em;
+  height: 20em; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: .2em .5em;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);

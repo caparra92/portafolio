@@ -3,12 +3,48 @@
     <h1 class="title">Projects</h1>
     <p v-text="p1"></p>
     <p class="git">Check my <a href="https://github.com/caparra92" target="blank" >GitHub </a>profile for contributions and tips, i really like to learn of other expertise developers and clients, thanks for your help!</p>
+    <div class="project-list">
+      <div class="row flex">
+        <a href="http://deleite.domipan.co" target="_blank">
+          <Card
+            class="card col-sm-12"
+            image="deleite.png"
+            title="deleite.domipan.co"
+            description="Information system mades with Laravel and Ajax"
+            ref="card13"
+          ></Card>
+        </a>
+        <a href="https://parracamilo.tk" target="_blank">
+          <Card
+            class="card col-sm-12"
+            image="portafolio.png"
+            title="parracamilo.tk"
+            description="This portafolio mades with vuejs and tailwind css"
+            ref="card13"
+          ></Card>
+        </a>
+        <a href="https://appmoda.netlify.app" target="_blank">
+          <Card
+            class="card col-sm-12"
+            image="appmoda.png"
+            title="appmoda.netlify.app"
+            description="Eccommerce made with vuejs and vuetify framework"
+            ref="card13"
+          ></Card>
+        </a>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import Card from '@/components/card.vue'
+
 export default {
   name: 'Projects',
+  components: {
+    Card
+  },
   props: {
     p1: {
       type: String,
@@ -27,6 +63,15 @@ export default {
 .project {
   margin: 0 auto;
   height: 100vh;
+}
+
+.project-list {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.card {
+  width: 10em;
+  height: 12em;
 }
 
 .project p {

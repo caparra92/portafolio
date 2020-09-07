@@ -2,13 +2,14 @@
   <section class="skills" id="skills">
     <h1 class="title">Skills</h1>
     <p>What would you like for your next project? These are some awesome tecnologies for your website or information system</p>
-    <div class="w-2/3 h-auto lg:overflow-hidden overflow-x-scroll overflow-y-hidden m-auto pt-5">
+    <div class="w-2/3 h-auto lg:overflow-hidden overflow-x-scroll overflow-y-hidden m-auto pt-2 pb-2">
       <ul class="list-items" ref="slider">
         <li>
           <Card image="laravel.png" title="Laravel" description="Laravel PHP framework" ref="card1"></Card>
         </li>
         <li>
           <Card
+            class="card"
             image="javascript.png"
             title="Javascript"
             description="The language of the web"
@@ -17,6 +18,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="java.png"
             title="Java"
             description="Web and native apps"
@@ -27,6 +29,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="logo.png"
             title="Vue JS"
             description="Frontend javascript library"
@@ -35,6 +38,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="jquery.png"
             title="Jquery"
             description="Quickly and easy web interactions"
@@ -44,6 +48,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="npm.png"
             title="NPM"
             description="Package manager for nodejs"
@@ -54,6 +59,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="github.png"
             title="GitHub"
             description="Version control system"
@@ -63,6 +69,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="mysql.svg"
             title="MySql"
             description="Relacional database manager"
@@ -71,6 +78,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="ajax.png"
             title="Ajax"
             description="Asyncronous javascript and XML"
@@ -80,6 +88,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="php.png"
             title="PHP"
             description="Program language for the server side"
@@ -89,6 +98,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="css.svg"
             title="Css3"
             description="Styles for the real life pages"
@@ -97,6 +107,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="html.png"
             title="HTML 5"
             description="Markup language of the web"
@@ -105,6 +116,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="vscode.png"
             title="Visual Studio code"
             description="Intuitive text editor"
@@ -113,6 +125,7 @@
         </li>
         <li>
           <Card
+            class="card"
             image="wordpress.png"
             title="Wordpress"
             description="Top CMS system for blogs and websites"
@@ -145,11 +158,15 @@ export default {
   margin: 0 auto;
   height: 100vh;
 }
+.card {
+  width: 10em;
+  height: 20em;
+}
 
 p {
   margin: 0 auto;
+  padding: 0;
   max-width: 80%;
-  margin-bottom: 30px;
 }
 
 .here {
@@ -175,7 +192,7 @@ p {
 }
 .slider {
   width: 75%;
-  margin: auto;
+  margin: 1em auto;
   padding-bottom: .3em;
   overflow: hidden;
 }
@@ -183,7 +200,7 @@ p {
 .list-items {
   display: flex;
   width: 300%;
-  padding: .2em 0;
+  padding: 0;
   animation: slider 20s infinite alternate cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 

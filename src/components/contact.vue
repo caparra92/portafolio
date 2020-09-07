@@ -1,6 +1,6 @@
 <template>
-  <section class="my-0 mx-auto" id="contact">
-    <h1 class="title" v-text="title"></h1>
+  <section class="md:pt-5 md:mt-5 mx-auto" id="contact">
+    <h1 class="title md:mt-5" v-text="title"></h1>
     <div class="md:flex md:flex-row sm:flex sm:flex-col justify-between items-center">
       <div class="sm:w-full my-0 lg:mx-auto bg-white md:w-1/2 xs:w-full rounded-sm px-5 mx-5">
         <slot></slot>
@@ -78,8 +78,7 @@ export default {
 @media all and (min-width: 320px) and (max-width: 768px){
 
 h1 {
-  margin-top: 3em;
-  padding-top: 10px;
+  margin-top: 2em;
 }
 
 .article {

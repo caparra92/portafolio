@@ -11,7 +11,7 @@
         <p>
           You can contact me for email through caparra92@gmail.com or in the social media section below the menu
         </p>
-        <p slot="textLine">You can call me on +55 (43) 991-739-069 if you want to get in touch more quickly.
+        <p slot="textLine">You can call me on +57 3214719068 if you want to get in touch more quickly.
           (The country code is not necessary if you live in Colombia)
         </p>
       </Contact>

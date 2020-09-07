@@ -2,7 +2,7 @@
   <section class="container about" id="about">
     <h1 class="title">About</h1>
     <div class="about-content">
-      <img :src="require('../assets/camilo.jpg')" alt="Camilo" width="400px" height="400px" />
+      <img :src="require('../assets/camilo.jpg')" alt="Camilo" class="md:w-64 md:h-64 lg:w-1/3 lg:h-auto" />
       <div class="text-content">
       <h2>Camilo Parra, Web Developer</h2>
       <p>I was born in 1992 in Pasto city of Colombia, degree in computer science of the University of Nariño in 2017, he really likes work with web development specially with javascript and HTML tecnologies.</p>
@@ -51,6 +51,7 @@ h2 {
   width: 100%;
   margin-bottom: 20px;
   text-align: left;
+  font-size: 1.4em;
 }
 
 .about p {
@@ -58,6 +59,7 @@ h2 {
   text-align: justify;
   margin-bottom: 10px;
   margin-top: 20px;
+  font-size: 1.2em;
 }
 
 @media all and (min-width: 320px) and (max-width: 768px){
@@ -70,7 +72,7 @@ h2 {
   .text-content {
     text-align: justify;
     margin-left: 0;
-    font-size: 1em;
+    font-size: 0.7em;
     margin-bottom: 20px;
   }
 
@@ -92,4 +94,5 @@ h2 {
     margin-bottom: 15px;
   }
 }
+
 </style>
