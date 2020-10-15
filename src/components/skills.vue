@@ -18,7 +18,7 @@
               ref="card2"
             ></Card>
           </li>
-          <li>
+          <!-- <li>
             <Card
               class="card"
               image="java.png"
@@ -28,7 +28,7 @@
               :addTop="true"
               >
             </Card>
-          </li>
+          </li> -->
           <li>
             <Card
               class="card"

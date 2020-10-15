@@ -1,6 +1,6 @@
 <template>
   <div class='card'>
-    <img :src="require('../assets/'+image)" alt=image ref="image" :class="{ 'add-top' : addTop}" />
+    <img :src="require('../assets/'+image)" alt=image ref="image" :class="{ 'add-top' : addTop}">
     <div class='card-container'>
       <h1 class='card-title pt-2 font-bold'><b>{{title}}</b></h1>
       <p v-text='description'></p>
@@ -55,9 +55,8 @@ export default {
 }
 .add-top {
   position: relative;
-  padding-top: 3em;
+  padding-top: .5em;
   margin: 2em 0;
-  top: 50%;
   display: inline;
 }
 @media all and (min-width: 320px) and (max-width: 768px){
