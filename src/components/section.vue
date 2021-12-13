@@ -1,7 +1,7 @@
 <template>
   <section class="container about" id="about">
     <h1 class="title">About</h1>
-    <div class="title-img"><img src="https://i.postimg.cc/XJvyBX5L/portafolio-image.jpg" alt="Camilo" class="md:w-64 md:h-64 lg:w-1/3 lg:h-auto" /></div>
+    <div class="title-img"><img src="https://i.postimg.cc/wxX1VS5L/portafolio-image.jpg" alt="Camilo" class="md:w-64 md:h-64 lg:w-1/3 lg:h-auto" /></div>
     <div class="about-content">
       <div class="text-content">
       <h2>Camilo Parra, Web Developer</h2>
