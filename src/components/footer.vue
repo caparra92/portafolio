@@ -21,7 +21,7 @@ export default {
   props: {
     content: {
       type: String,
-      default: 'Copyright ©2020 Camilo Parra'
+      default: 'Copyright ©2022 Camilo Parra'
     }
   }
 }
