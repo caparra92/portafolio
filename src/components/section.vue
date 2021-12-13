@@ -41,9 +41,10 @@ export default {
 }
 
 .about img {
-  margin-right: 1em;
-  margin-top: 0.5em;
-  box-shadow: 5px 5px 10px grey
+  margin: auto 0;
+  box-shadow: 5px 5px 10px grey;
+  border-radius: 100%;
+  height: 170px;
 }
 
 h2 {
@@ -92,6 +93,14 @@ h2 {
     max-width: 80%;
     text-align: justify;
     margin-bottom: 15px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+  .about img {
+    height: auto;
+    margin-left: 1em;
   }
 }
 
