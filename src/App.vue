@@ -98,6 +98,7 @@ a {
   padding: 0;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
 }
 .container {
   margin: 5px;

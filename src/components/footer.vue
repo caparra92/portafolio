@@ -8,7 +8,7 @@
       <a class="mt-3" href="http://www.github.com/caparra92">
         <img class="w-10 mr-3 mx-auto mt-5 pt-5" :src="require('../assets/github.svg')" alt="github" />
       </a>
-      <a class="mt-3" href="http://www.linkedin.com/caparra92">
+      <a class="mt-3" href="http://www.linkedin.com/parra-camilo">
         <img class="w-10 mr-3 mx-auto mt-5 pt-5" :src="require('../assets/linkedin.svg')" alt="linkedin" />
       </a>
     </div>
