@@ -18,17 +18,6 @@
               ref="card2"
             ></Card>
           </li>
-          <!-- <li>
-            <Card
-              class="card"
-              image="java.png"
-              title="Java"
-              description="Web and native apps"
-              ref="card3"
-              :addTop="true"
-              >
-            </Card>
-          </li> -->
           <li>
             <Card
               class="card"

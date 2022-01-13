@@ -10,7 +10,7 @@
             class="card col-sm-12 text-gray-900"
             image="deleite.png"
             title="deleite.domipan.co"
-            description="Information system mades with Laravel and Ajax"
+            description="Information system made with Laravel and Ajax"
             ref="card13"
           ></Card>
         </a>
@@ -19,7 +19,16 @@
             class="card col-sm-12 text-gray-900"
             image="portafolio.png"
             title="parracamilo.tk"
-            description="This portafolio mades with vuejs and tailwind css"
+            description="This portafolio made with vuejs and tailwind css"
+            ref="card13"
+          ></Card>
+        </a>
+        <a href="https://eventspage.netlify.app" target="_blank">
+          <Card
+            class="card col-sm-12 text-gray-900"
+            image="events.png"
+            title="eventspage.netlify.app"
+            description="Events page mockup made with HTML and CSS"
             ref="card13"
           ></Card>
         </a>
