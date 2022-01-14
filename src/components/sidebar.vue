@@ -201,7 +201,7 @@ export default {
 }
 .wrapper .sidebar ul li:hover {
   background: var(--secondary);
-  color: var(--primary);
+  color: #f3f5f9;
   font-size: 1.5em;
 }
 .wrapper .sidebar ul li:hover a {
