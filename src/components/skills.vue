@@ -182,10 +182,11 @@ p {
   margin: 0 auto;
   padding: 0;
   max-width: 80%;
+  color: var(--text-title);
 }
 
 .here {
-  color: black;
+  color: var(--text-title);
   font-size: 1em;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
@@ -200,7 +201,7 @@ p {
   position: absolute;
   font-size: 0.5em;
   border-radius: 5px;
-  color: black;
+  color: var(--text-title);
   cursor: pointer;
   border: none;
   background: transparent;
@@ -219,7 +220,7 @@ p {
 .arrow button {
   outline: none;
   font-size: 3em;
-  color: #413968
+  color: var(--primary)
 }
 
 .arrow-left {
@@ -312,10 +313,10 @@ p {
 
   p {
     margin-bottom: 1.5em;
+    color: var(--text-title);
   }
 
   .here {
-    color: black;
     font-size: 1em;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
@@ -330,7 +331,6 @@ p {
   position: absolute;
   font-size: 0.5em;
   border-radius: 5px;
-  color: black;
   cursor: pointer;
   border: none;
   background: transparent;

@@ -29,6 +29,7 @@ export default {
 
 .title {
   margin-bottom: 0;
+  color: var(text-title);
 }
 
 .about-content {
@@ -41,12 +42,13 @@ export default {
 .text-content {
   text-align: justify;
   margin-left: 1em;
-  font-size: 0.8em
+  font-size: 0.8em;
+  color: var(--text-title);
 }
 
 .about img {
   margin: auto 0;
-  box-shadow: 5px 5px 10px grey;
+  box-shadow: 5px 5px 10px var(--border);
   border-radius: 100%;
   width: 150px;
 }
@@ -57,6 +59,7 @@ h2 {
   margin-bottom: 20px;
   text-align: left;
   font-size: 1.4em;
+  color: var(--text-title);
 }
 
 .about p {
@@ -65,6 +68,7 @@ h2 {
   margin-bottom: 10px;
   margin-top: 20px;
   font-size: 1.2em;
+  color: var(--text-title);
 }
 
 .title-img {

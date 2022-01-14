@@ -1,5 +1,17 @@
 <template>
   <header class="header" id="header">
+    <div class="change-theme-container">
+      <label class="switch">
+        <input type="checkbox" class="switch" @click="changeTheme()">
+        <span class="slider"></span>
+      </label>
+      <!-- <span class="sun" @click="changeTheme()">
+        <i class="fa fa-sun-o"></i>
+      </span>
+      <span class="moon" @click="changeTheme()">
+        <i class="fa fa-moon-o"></i>
+      </span> -->
+    </div>
     <div class="name">
       <h1>camilo parra</h1>
       <h4 data-text='web developer'>web developer</h4>
@@ -16,6 +28,27 @@ export default {
       type: String,
       default: 'Web developer'
     }
+  },
+  data () {
+    return {
+      clicked: false,
+      root: null
+    }
+  },
+  mounted () {
+    this.root = document.documentElement
+  },
+  methods: {
+    changeTheme () {
+      this.clicked = !this.clicked
+      if (this.clicked) {
+        this.root.style.setProperty('--primary', '#2c2c2c')
+        this.root.style.setProperty('--text-title', '#f3f5f9')
+      } else {
+        this.root.style.setProperty('--primary', '#f3f5f9')
+        this.root.style.setProperty('--text-title', '#2c2c2c')
+      }
+    }
   }
 }
 </script>
@@ -25,10 +58,91 @@ export default {
 header {
   height: 100vh;
   padding: 20px;
-  background-image: linear-gradient(rgba(136, 92, 207, 0.8), rgba(0,0,0,0.9)), url('../assets/webdev.jpg');
+  background-image: linear-gradient(var(--primary), rgba(0, 0, 0, 0.9)), url('../assets/webdev.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 1px solid #e0e4e8;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.change-theme-container {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  padding: 0 15px 0;
+  margin-right: 10px;
+  display: flex;
+  width: 12%;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.change-theme-container span:hover {
+  transform: scale(1.2);
+}
+
+.change-theme-container span:nth-child(1):hover {
+  background: #dada40;
+  color: var(--text-title);
+}
+
+.change-theme-container span:nth-child(2):hover {
+  background: #838382;
+  color: var(--text-title);
+}
+
+.switch {
+  position: relative;
+  margin: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 34px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--border);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--primary);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--secondary);
+}
+
+input:focus + slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -moz-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 .name {
@@ -40,9 +154,9 @@ header {
   padding: 0;
   transform: translate(-50%,-50%);
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text-title);
   animation: fall 2s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
-  animation-delay: 0.8s;
+  animation-delay: 1s;
   /* color: transparent; */
 }
 
@@ -102,6 +216,16 @@ h4 {
   header {
     padding: 0;
     height: 100vh;
+  }
+
+  .change-theme-container {
+    margin-right: 10px;
+    width: 25%;
+  }
+
+  .change-theme-container span {
+    width: 1.5em;
+    height: 1.5em;
   }
 
   .name {

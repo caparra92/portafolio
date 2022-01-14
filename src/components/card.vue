@@ -46,12 +46,19 @@ export default {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
+.card-title {
+  color: var(--text-title);
+}
 .card img {
   width: 100%;
 }
 .card-container {
   padding: 2px 16px;
   font-size: 0.8em;
+}
+
+.card-container p {
+  color: var(--text-title);
 }
 .add-top {
   position: relative;

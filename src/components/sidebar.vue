@@ -107,7 +107,7 @@ export default {
   position: absolute;
 }
 .list:hover {
-  color:#fff;
+  color: var(--secondary);
 }
 #toggle {
   outline: none;
@@ -117,20 +117,23 @@ export default {
   position: fixed;
   width: 35px;
   font-size: 3em;
-  color: #685e97;
+  color: var(--secondary);
   cursor: pointer;
   border: none;
   background: none;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px var(--text-title);
+  -moz-text-stroke: 1px var(--text-title);
   z-index: -1;
   transition: all 0.5s;
   -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
 }
 #toggle:hover {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
-  color: #fff;
-  -webkit-text-stroke: 1px #000;
+  color: var(--primary);
+  -webkit-text-stroke: 1px var(--text-title);
+  -moz-text-stroke: 1px var(--text-title);
 }
 #closeBtn {
   outline: none;
@@ -138,7 +141,7 @@ export default {
   left: 20%;
   top: -5px;
   font-size: 4em;
-  color: #fff;
+  color: var(--secondary);
   cursor: pointer;
   border: none;
   background: none;
@@ -147,10 +150,12 @@ export default {
   z-index: 1;
   transition: all 0.35s;
   -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
 }
 #closeBtn:hover {
-  color: #fff;
-  -webkit-text-stroke: 2px #000;
+  color: var(--secondary);
+  -webkit-text-stroke: 2px var(--text-title);
+  -moz-text-stroke: 2px var(--text-title);
 }
 .wrapper {
   display: flex;
@@ -162,7 +167,7 @@ export default {
   position: fixed;
   width: 20%;
   height: 100%;
-  background: #413968;
+  background: var(--primary);
   padding: 30px 0;
   box-shadow: 5px 5px 10px grey;
   transition: all 0.25s;
@@ -174,17 +179,17 @@ export default {
 .wrapper .sidebar ul li {
   display: flex;
   padding: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  border-top: 1px solid rgba(225, 225, 225, 0.05);
+  border-bottom: 1px solid var(--text-title);
+  border-top: 1px solid var(--text-title);
   left: 25px;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-title);
   font-size: 1em;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
 }
 .wrapper .sidebar ul li a {
-  color: #bdb8d6;
+  color: var(--text-title);
   display: block;
 }
 .wrapper .sidebar ul li a .fa {
@@ -192,32 +197,32 @@ export default {
   width: 25px;
   padding: 5px;
   margin-top: 10px;
-  color: #bdb8d6;
+  color: var(--primary);
 }
 .wrapper .sidebar ul li:hover {
-  background: #fff;
-  color: #413968;
+  background: var(--secondary);
+  color: var(--primary);
   font-size: 1.5em;
 }
 .wrapper .sidebar ul li:hover a {
-  color: #fff;
+  color: var(--primary);
 }
 .wrapper .sidebar ul li:hover a .fa {
-  color: #fff;
+  color: var(--text-title);
 }
 .facebook:hover {
   background: #0000ff;
-  color: #fff;
+  color: var(--primary);
   font-size: 1.5em;
 }
 .instagram:hover {
   background: #00ff00;
-  color: #fff;
+  color: var(--primary);
   font-size: 1.5em;
 }
 .linkedin:hover {
   background: #ff0000;
-  color: #fff;
+  color: var(--primary);
   font-size: 1.5em;
 }
 .wrapper .sidebar .social-media {
@@ -233,7 +238,7 @@ export default {
 .wrapper .sidebar .social-media a {
   display: block;
   width: 40px;
-  background: #594f8d;
+  background: var(--primary);
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -242,13 +247,13 @@ export default {
   border-top-left-radius: 5px;
 }
 .wrapper .sidebar .social-media a .fa {
-  color: #fff;
+  color: var(--text-title);
 }
 .wrapper .sidebar .social-media:hover a:nth-child(1) {
   width: 45px;
   height: 45px;
   padding-top: 5px;
-  color: #fff;
+  color: var(--primary);
   font-size: 1.5em;
   background: #3d559d;
 }
@@ -256,17 +261,17 @@ export default {
   width: 45px;
   height: 45px;
   padding-top: 5px;
-  color: #fff;
+  color: var(--primary);
   font-size: 1.5em;
-  background: #8a3ab9;
+  background: #661366;
 }
 .wrapper .sidebar .social-media:hover a:nth-child(3) {
   width: 45px;
   height: 45px;
   padding-top: 5px;
-  color: #fff;
+  color: var(--primary);
   font-size: 1.5em;
-  background: #000;
+  background: #4e4a4e;
 }
 .wrapper .main-content {
   width: 100%;
@@ -274,9 +279,9 @@ export default {
 .wrapper .main-content header {
   height: 100vh;
   padding: 20px;
-  background: #fff;
+  background: var(--secondary);
   color: #717171;
-  border-bottom: 1px solid #e0e4e8;
+  border-bottom: 1px solid var(--border);
 }
 
 @media all and (min-width: 320px) and (max-width: 768px){
@@ -284,8 +289,6 @@ export default {
     position: fixed;
     width: 50%;
     height: 100%;
-    background: #413968;
-    box-shadow: 5px 5px 10px grey;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
   }

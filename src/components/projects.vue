@@ -89,10 +89,11 @@ export default {
   max-width: 80%;
   text-align: justify;
   margin-bottom: 15px;
+  color: var(--text-title);
 }
 
 .git a {
-  color: black;
+  color: var(--text-title);
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;

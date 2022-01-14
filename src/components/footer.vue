@@ -31,10 +31,10 @@ export default {
 <style scoped>
 .footer {
   padding-bottom: 10px;
-  background: #5f5594;
+  background: var(--secondary);
   width: 100%;
   height: 6em;
-  color: #fff;
+  color: var(--primary);
 }
 
 .footer p {
@@ -45,6 +45,7 @@ export default {
   position: absolute;
   align-items: center;
   text-align: center;
+  color: var(--text-title);
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {

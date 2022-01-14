@@ -61,18 +61,28 @@ export default {
 <style>
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+:root {
+  --primary: #f3f5f9;
+  --secondary: #462d6d;
+  --text-title: #2c2c2c;
+  --border: #5c5c5c;
+  --btn-primary: #62468f;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  transition: all .5s ease-in-out;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  background: #f3f5f9;
+  background: var(--primary);
   text-align: center;
   font: 300 20px/1.7 'Josefin Sans';
 }
@@ -86,7 +96,7 @@ p {
   line-height: 1.5em;
 }
 a {
-  color: #fff;
+  color: var(--secondary);
 }
 .main-content {
   margin-left: 20%;
@@ -111,6 +121,7 @@ a {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+  color: var(--text-title);
 }
 .line {
   margin-bottom: 1em;
@@ -120,11 +131,11 @@ a {
   position: relative;
   display: inline;
   top: 2em;
-  color: #2c3e50;
+  color: var(--btn-primary);
   padding: 0.5em;
   margin: 0.5em;
-  background: #fff;
-  border: 1px solid rgb(92, 92, 92);
+  background: var(--secondary);
+  border: 1px solid var(--border);
   border-radius: 5px;
 }
 
@@ -133,7 +144,7 @@ a {
 }
 
 .btn-custom:hover {
-  background: #f3f5f9;
+  background: var(--secondary);
 }
 
 #app {
