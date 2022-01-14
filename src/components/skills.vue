@@ -220,7 +220,7 @@ p {
 .arrow button {
   outline: none;
   font-size: 3em;
-  color: var(--primary)
+  color: var(--text-title)
 }
 
 .arrow-left {

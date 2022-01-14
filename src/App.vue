@@ -85,6 +85,7 @@ body {
   background: var(--primary);
   text-align: center;
   font: 300 20px/1.7 'Josefin Sans';
+  overflow-x: hidden;
 }
 figure {
   padding: 10px;

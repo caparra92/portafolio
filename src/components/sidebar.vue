@@ -141,7 +141,7 @@ export default {
   left: 20%;
   top: -5px;
   font-size: 4em;
-  color: var(--secondary);
+  color: var(--text-title);
   cursor: pointer;
   border: none;
   background: none;

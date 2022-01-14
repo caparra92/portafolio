@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p v-text="content" class="mx-auto"></p>
-    <div class="flex justify-center items-center w-full mx-auto pt-3">
+    <div class="footer-social">
       <a class="mt-3" href="http://www.facebook.com/galoAbolicao">
         <img class="w-10 mr-3 mx-auto mt-5 pt-5" :src="require('../assets/facebook.svg')" alt="facebook" />
       </a>
@@ -30,22 +30,36 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 10px;
-  background: var(--secondary);
+  background: var(--primary);
   width: 100%;
-  height: 6em;
+  height: auto;
   color: var(--primary);
 }
 
 .footer p {
   width: 100%;
-  margin: 0 auto;
   margin-top: 1em;
   padding: 0;
-  position: absolute;
   align-items: center;
   text-align: center;
   color: var(--text-title);
+}
+
+.footer .footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-social a {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
@@ -54,10 +68,12 @@ export default {
     margin: 0;
     margin-top: 1.8em;
     padding: 0;
-    position: absolute;
-    align-items: center;
-    text-align: center;
     left: 0;
+  }
+
+  .footer .footer-social a {
+    margin: .5em;
+    padding-bottom: .5em;
   }
 }
 </style>
