@@ -2,8 +2,8 @@
   <header class="header" id="header">
     <div class="change-theme-container">
       <label class="switch">
-        <input type="checkbox" class="switch" @click="changeTheme()">
-        <span class="slider"></span>
+        <input type="checkbox" class="switch" @click="changeTheme()" />
+        <span class="slider-switch"></span>
       </label>
       <!-- <span class="sun" @click="changeTheme()">
         <i class="fa fa-sun-o"></i>
@@ -14,7 +14,7 @@
     </div>
     <div class="name">
       <h1>camilo parra</h1>
-      <h4 data-text='web developer'>web developer</h4>
+      <h4 data-text="web developer">web developer</h4>
     </div>
     <!-- <div class="layer"></div> -->
   </header>
@@ -58,7 +58,8 @@ export default {
 header {
   height: 100vh;
   padding: 20px;
-  background-image: linear-gradient(var(--primary), rgba(0, 0, 0, 0.9)), url('../assets/webdev.jpg');
+  background-image: linear-gradient(var(--primary), rgba(0, 0, 0, 0.9)),
+    url("../assets/webdev.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 1px solid var(--secondary);
@@ -104,7 +105,7 @@ header {
   height: 0;
 }
 
-.slider {
+.slider-switch {
   position: absolute;
   cursor: pointer;
   border-radius: 34px;
@@ -113,11 +114,11 @@ header {
   left: 0;
   bottom: 0;
   background-color: var(--border);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.slider:before {
+.slider-switch:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -126,19 +127,19 @@ header {
   left: 4px;
   bottom: 4px;
   background-color: var(--primary);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked + .slider-switch {
   background-color: var(--secondary);
 }
 
-input:focus + slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus + .slider-switch {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked + .slider:before {
+input:checked + .slider-switch:before {
   -webkit-transform: translateX(26px);
   -moz-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -152,7 +153,7 @@ input:checked + .slider:before {
   left: 50%;
   margin: 0;
   padding: 0;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   text-transform: uppercase;
   color: var(--text-title);
   animation: fall 2s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
@@ -160,7 +161,7 @@ input:checked + .slider:before {
   /* color: transparent; */
 }
 
-h1 h2{
+h1 h2 {
   position: relative;
   display: inline;
   letter-spacing: 5px;
@@ -211,8 +212,7 @@ h4 {
   }
 }
  */
-@media all and (min-width: 320px) and (max-width: 768px){
-
+@media all and (min-width: 320px) and (max-width: 768px) {
   header {
     padding: 0;
     height: 100vh;
@@ -224,13 +224,29 @@ h4 {
   }
 
   .change-theme-container span {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.9em;
+    height: 1.3em;
   }
 
   .name {
     font-size: 1em;
-  /* color: transparent; */
+    /* color: transparent; */
+  }
+
+  .slider-switch {
+    border-radius: 13px;
+  }
+
+  .slider-switch::before {
+    height: 18px;
+    width: 18px;
+  }
+
+  input:checked + .slider-switch:before {
+    -webkit-transform: translateX(16px);
+    -moz-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
   }
 }
 </style>

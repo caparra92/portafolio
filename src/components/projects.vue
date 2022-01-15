@@ -3,45 +3,57 @@
     <h1 class="title">Projects</h1>
     <p v-text="p1"></p>
     <p class="git">Check my <a href="https://github.com/caparra92" target="blank" >GitHub </a>profile for contributions and tips, i really like to learn of other expertise developers and clients, thanks for your help!</p>
-    <div class="project-list">
-      <div class="row flex">
-        <a href="http://deleite.domipan.co" target="_blank">
-          <Card
-            class="card col-sm-12 text-gray-900"
-            image="deleite.png"
-            title="deleite.domipan.co"
-            description="Information system made with Laravel and Ajax"
-            ref="card13"
-          ></Card>
-        </a>
-        <a href="https://parracamilo.tk" target="_blank">
-          <Card
-            class="card col-sm-12 text-gray-900"
-            image="portafolio.png"
-            title="parracamilo.tk"
-            description="This portafolio made with vuejs and tailwind css"
-            ref="card13"
-          ></Card>
-        </a>
-        <a href="https://eventspage.netlify.app" target="_blank">
-          <Card
-            class="card col-sm-12 text-gray-900"
-            image="events.png"
-            title="eventspage.netlify.app"
-            description="Events page mockup made with HTML and CSS"
-            ref="card13"
-          ></Card>
-        </a>
-        <a href="https://appmoda.netlify.app" target="_blank">
-          <Card
-            class="card col-sm-12 text-gray-900"
-            image="appmoda.png"
-            title="appmoda.netlify.app"
-            description="Eccommerce made with vuejs and vuetify framework"
-            ref="card13"
-          ></Card>
-        </a>
+    <div class="card-list">
+      <div class="arrow arrow-left"><button @click="slideLeft"><span>&#60;</span></button></div>
+      <div class="slider-container">
+        <ul class="list-items" ref="slider">
+          <li>
+            <a href="http://deleite.domipan.co" target="_blank">
+              <Card
+                class="card col-sm-12 text-gray-900"
+                image="deleite.png"
+                title="deleite.domipan.co"
+                description="Information system made with Laravel and Ajax"
+                ref="card13"
+              ></Card>
+            </a>
+          </li>
+          <li>
+            <a href="https://parracamilo.tk" target="_blank">
+              <Card
+                class="card col-sm-12 text-gray-900"
+                image="portafolio.png"
+                title="parracamilo.tk"
+                description="This portafolio made with vuejs and tailwind css"
+                ref="card13"
+              ></Card>
+            </a>
+          </li>
+          <li>
+            <a href="https://eventspage.netlify.app" target="_blank">
+              <Card
+                class="card col-sm-12 text-gray-900"
+                image="events.png"
+                title="eventspage.netlify.app"
+                description="Events page mockup made with HTML and CSS"
+                ref="card13"
+              ></Card>
+            </a>
+          </li>
+          <li>
+            <a href="https://appmoda.netlify.app" target="_blank">
+              <Card
+                class="card col-sm-12 text-gray-900"
+                image="appmoda.png"
+                title="appmoda.netlify.app"
+                description="Eccommerce made with vuejs and vuetify framework"
+                ref="card13"
+              ></Card>
+            </a>
+          </li>
+        </ul>
       </div>
+      <div class="arrow arrow-right"><button @click="slideRight"><span>&#62;</span></button></div>
     </div>
   </section>
 </template>
@@ -63,6 +75,20 @@ export default {
       type: String,
       default: ''
     }
+  },
+  methods: {
+    slideLeft () {
+      const slider = this.$refs.slider
+      slider.classList.remove('list-items')
+      slider.className = 'move-slider'
+      slider.style.transform += 'translateX(-9%)'
+    },
+    slideRight () {
+      const slider = this.$refs.slider
+      slider.classList.remove('list-items')
+      slider.className = 'move-slider'
+      slider.style.transform += 'translateX(9%)'
+    }
   }
 }
 </script>
@@ -74,10 +100,6 @@ export default {
   height: 100vh;
 }
 
-.project-list {
-  max-width: 80%;
-  margin: 0 auto;
-}
 .card {
   width: 10em;
   height: 12em;

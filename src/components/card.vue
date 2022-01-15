@@ -83,11 +83,7 @@ export default {
   font-size: 0.8em;
 }
 .add-top {
-  position: relative;
-  padding-top: 1em;
   margin: 1em 0;
-  top: 50%;
-  display: inline
 }
 }
 </style>
