@@ -1,31 +1,20 @@
 <template>
-  <div class="flex w-full h-auto py-5 justify-center items-center">
+  <div class="flex h-auto justify-center items-center">
     <form
-      class="flex flex-col bg-white w-full p-5 justify-center items-center"
+      class="contact-form"
       ref="formEmail"
       @submit.prevent="sendEmail"
     >
-      <h1 class="text-center">Get in touch</h1>
-      <input
-        type="text"
-        class="border-none resize-none outline-none py-3 px-0 text-sm w-5/6 m-2 text-blue-900 transition-all duration-300 border-b focus:border-purple-700"
-        v-model="name"
-        placeholder="Name"
-      />
-      <input
-        type="email"
-        class="border-none resize-none outline-none py-3 px-0 text-sm w-5/6 m-2 text-blue-900 transition-all duration-300 border-b focus:border-purple-700"
-        v-model="email"
-        placeholder="Email"
-      />
-      <textarea
-        v-model="message"
-        class="border-none resize-none outline-none py-3 px-0 text-sm w-5/6 m-2 text-blue-900 transition-all duration-300 border-b focus:border-purple-700"
-        cols="20"
-        rows="3"
-        placeholder="Message"
-      ></textarea>
-      <button type="submit" class="btn btn-purple">Send</button>
+      <div class="button-container">
+        <button type="button" class="btn btn-purple">
+          <i class="fa fa-envelope"></i>
+          Email
+        </button>
+        <button type="button" class="btn btn-purple">
+          <i class="fa fa-file"></i>
+          Resume
+        </button>
+      </div>
     </form>
   </div>
 </template>
@@ -67,4 +56,40 @@ export default {
 }
 </script>
 <style scoped>
+  .contact-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+    align-self: center;
+    margin: 15px 0 5px 10px;
+    outline: none;
+  }
+
+  .contact-form .btn:nth-child(2) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form .btn:nth-child(2) i {
+    margin-right: 5px;
+    padding-bottom: 4px;
+  }
+
+  .button-container {
+    display: flex;
+  }
+
+  @media all and (min-width: 320px) and (max-width: 768px){
+
+  .contact-form .btn {
+    margin: 15px 0 0 10px;
+  }
+
+  }
 </style>

@@ -9,7 +9,7 @@
       </Skills>
       <Contact>
         <p>
-          You can contact me for email through caparra92@gmail.com or in the social media section below the menu
+          You can contact me for email through <b>caparra92@gmail.com</b> or in the social media section below the menu
         </p>
         <p slot="textLine">You can call me on +57 3214719068 if you want to get in touch more quickly.
           (The country code is not necessary if you live in Colombia)
@@ -112,8 +112,12 @@ a {
   -moz-transition: all 0.25s;
 }
 .container {
-  margin: 5px;
+  position: relative;
+  padding-top: 130px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .title {
   margin: 0 auto;
@@ -175,7 +179,7 @@ a {
   align-items: center;
   justify-content: center;
   max-width: 80%;
-  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .card {
@@ -307,46 +311,38 @@ a {
     -moz-transition: all 0.25s;
   }
 
-.here:hover {
-  font-size: 1.3em;
-}
+  .here:hover {
+    font-size: 1.3em;
+  }
 
-.btn {
-  position: absolute;
-  font-size: 0.5em;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-}
-.slider {
-  width: 75%;
-  margin: auto;
-  padding-bottom: .3em;
-  overflow: hidden;
-}
+  .slider {
+    width: 75%;
+    margin: auto;
+    padding-bottom: .3em;
+    overflow: hidden;
+  }
 
-.list-items {
-  display: flex;
-  width: 300%;
-  padding: .2em 0;
-  animation: none;
-}
+  .list-items {
+    display: flex;
+    width: 300%;
+    padding: .2em 0;
+    animation: none;
+  }
 
-.list-items:hover {
-  cursor: pointer;
-  animation-play-state: paused;
-}
+  .list-items:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
 
-.list-items li {
-  width: auto;
-}
+  .list-items li {
+    width: auto;
+  }
 
-.add-space {
-  position: relative;
-  padding-top: 3em;
-  margin: 2em 0;
-  top: 50%;
-}
+  .add-space {
+    position: relative;
+    padding-top: 3em;
+    margin: 2em 0;
+    top: 50%;
+  }
 }
 </style>

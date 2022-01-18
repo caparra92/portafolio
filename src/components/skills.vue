@@ -1,5 +1,5 @@
 <template>
-  <section class="skills" id="skills">
+  <section class="container skills" id="skills">
     <h1 class="title">Skills</h1>
     <p>What would you like for your next project? These are some awesome tecnologies for your website or information system</p>
     <div class="card-list">
@@ -170,12 +170,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .skills {
-  margin: 0 auto;
   height: 100vh;
 }
 
 p {
   margin: 0 auto;
+  margin-bottom: 15px;
   padding: 0;
   max-width: 80%;
   color: var(--text-title);

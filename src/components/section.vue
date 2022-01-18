@@ -23,13 +23,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .about {
-  margin: 0 auto;
   height: 100vh;
-}
-
-.title {
-  margin-bottom: 0;
-  color: var(text-title);
 }
 
 .about-content {
@@ -80,33 +74,26 @@ h2 {
 
 @media all and (min-width: 320px) and (max-width: 768px){
   .about-content {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
     width: 100%;
   }
   .text-content {
-    text-align: justify;
     margin-left: 0;
     font-size: 0.7em;
-    margin-bottom: 20px;
   }
 
   .about img {
-    display: none;
+    margin-bottom: 50px;
   }
 
   h2 {
     text-align: center;
     position: relative;
-    margin-top: -1em;
   }
 
   .about p {
     margin: 0 auto;
     position: relative;
     max-width: 80%;
-    text-align: justify;
     margin-bottom: 15px;
   }
 }

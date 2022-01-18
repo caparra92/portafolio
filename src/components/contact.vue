@@ -1,8 +1,8 @@
 <template>
-  <section class="md:pt-5 md:mt-5 mx-auto" id="contact">
-    <h1 class="title md:mt-5" v-text="title"></h1>
-    <div class="md:flex md:flex-row sm:flex sm:flex-col justify-between items-center">
-      <div class="sm:w-full my-0 lg:mx-auto bg-white md:w-1/2 xs:w-full rounded-sm px-5 mx-5">
+  <section class="container" id="contact">
+    <h1 class="title">Contact</h1>
+    <div class="contact-container">
+      <div class="text-container">
         <slot></slot>
         <p class="py-4 text-black">
           <i class="fa fa-clock-o"></i>
@@ -10,7 +10,7 @@
         </p>
         <slot name="textLine"></slot>
       </div>
-      <div class="md:w-1/3 sm:w-full my-0 mx-auto md:px-2 sm:px-5">
+      <div class="form-contact">
         <FormContact/>
       </div>
     </div>
@@ -26,10 +26,6 @@ export default {
     FormContact
   },
   props: {
-    title: {
-      type: String,
-      default: 'Contact'
-    },
     contactP2: {
       type: String,
       default: ", but i'm get ready for contact by e-mail or social media."
@@ -74,11 +70,40 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container {
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-container p {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.text-container {
+  margin-bottom: 30px;
+}
+
+.text-container p {
+  color: var(--text-title);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
 
 @media all and (min-width: 320px) and (max-width: 768px){
 
 h1 {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .article {
@@ -98,9 +123,12 @@ h1 {
 }
 
 .contact-form {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  display: block;
+}
+
+.contact-container {
+  flex-direction: column;
 }
 
 }
