@@ -79,15 +79,18 @@ export default {
   methods: {
     slideLeft () {
       const slider = this.$refs.slider
+      const ArrayItems = [...slider.children]
       slider.classList.remove('list-items')
       slider.className = 'move-slider'
-      slider.style.transform += 'translateX(-9%)'
+      slider.style.transform += `translateX(-${ArrayItems[0].clientWidth}px)`
+      console.log(ArrayItems.length)
     },
     slideRight () {
       const slider = this.$refs.slider
+      const ArrayItems = [...slider.children]
       slider.classList.remove('list-items')
       slider.className = 'move-slider'
-      slider.style.transform += 'translateX(9%)'
+      slider.style.transform += `translateX(${ArrayItems[0].clientWidth}px)`
     }
   }
 }
