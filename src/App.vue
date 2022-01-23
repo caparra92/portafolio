@@ -68,6 +68,8 @@ export default {
   --text-title: #2c2c2c;
   --border: #5c5c5c;
   --btn-primary: #62468f;
+  --black: #000;
+  --white: #fff;
 }
 
 * {
