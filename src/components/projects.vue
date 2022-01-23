@@ -11,7 +11,7 @@
             <a href="http://basic-card-component.netlify.app" target="_blank">
               <Card
                 class="card col-sm-12 text-gray-900"
-                image="card-component.png"
+                image="card.png"
                 title="component.netlifly.app"
                 description="Simple card component made with css flexbox"
                 ref="card13"
