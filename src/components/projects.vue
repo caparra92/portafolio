@@ -12,7 +12,7 @@
               <Card
                 class="card col-sm-12 text-gray-900"
                 image="card-component.png"
-                title="basic-card-component"
+                title="basic-card-component.netlifly.app"
                 description="Simple card component made with css flexbox"
                 ref="card13"
               ></Card>
@@ -23,7 +23,7 @@
               <Card
                 class="card col-sm-12 text-gray-900"
                 image="portafolio.png"
-                title="parracamilo.tk"
+                title="caparra.netlify.app"
                 description="This portafolio made with vuejs and tailwind css"
                 ref="card13"
               ></Card>
