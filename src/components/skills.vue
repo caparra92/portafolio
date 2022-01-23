@@ -3,7 +3,7 @@
     <h1 class="title">Skills</h1>
     <p>What would you like for your next project? These are some awesome tecnologies for your website or information system</p>
     <div class="card-list">
-      <div class="arrow arrow-left"><button @click="slideLeft"><span>&#60;</span></button></div>
+      <div class="arrow arrow-left"><button @click="slideLeft($event)"><span>&#60;</span></button></div>
       <div class="slider-container">
         <ul class="list-items" ref="slider">
           <li>
@@ -125,7 +125,7 @@
           </li>
         </ul>
       </div>
-      <div class="arrow arrow-right"><button @click="slideRight"><span>&#62;</span></button></div>
+      <div class="arrow arrow-right"><button @click="slideRight($event)"><span>&#62;</span></button></div>
     </div>
     <slot></slot>
   </section>
@@ -139,7 +139,10 @@ export default {
   components: {
     Card
   },
-  props: {
+  data () {
+    return {
+      counter: 0
+    }
   },
   computed: {
     clickCounter () {
@@ -157,19 +160,37 @@ export default {
         callback()
       }
     }, */
-    slideLeft () {
+    slideLeft (e) {
       const slider = this.$refs.slider
       const ArrayItems = [...slider.children]
       slider.classList.remove('list-items')
       slider.className = 'move-slider'
       slider.style.transform += `translateX(-${ArrayItems[0].clientWidth}px)`
+      if (e) {
+        this.counter--
+        console.log(this.counter)
+      }
+      if (this.counter === (-ArrayItems.length - 1)) {
+        e.target.style.display = 'none'
+      } else {
+        e.target.style.display = 'block'
+      }
     },
-    slideRight () {
+    slideRight (e) {
       const slider = this.$refs.slider
       const ArrayItems = [...slider.children]
       slider.classList.remove('list-items')
       slider.className = 'move-slider'
       slider.style.transform += `translateX(${ArrayItems[0].clientWidth}px)`
+      if (e) {
+        this.counter++
+        console.log(this.counter)
+      }
+      if (this.counter === ArrayItems.length - 1) {
+        e.target.style.display = 'none'
+      } else {
+        e.target.style.display = 'block'
+      }
     }
   }
 }
@@ -209,5 +230,6 @@ p {
   cursor: pointer;
   border: none;
   background: transparent;
+  outline: none;
 }
 </style>

@@ -8,18 +8,18 @@
       <div class="slider-container">
         <ul class="list-items" ref="slider">
           <li>
-            <a href="http://deleite.domipan.co" target="_blank">
+            <a href="http://basic-card-component.netlify.app" target="_blank">
               <Card
                 class="card col-sm-12 text-gray-900"
-                image="deleite.png"
-                title="deleite.domipan.co"
-                description="Information system made with Laravel and Ajax"
+                image="card-component.png"
+                title="basic-card-component"
+                description="Simple card component made with css flexbox"
                 ref="card13"
               ></Card>
             </a>
           </li>
           <li>
-            <a href="https://parracamilo.tk" target="_blank">
+            <a href="https://caparra.netlify.app" target="_blank">
               <Card
                 class="card col-sm-12 text-gray-900"
                 image="portafolio.png"
