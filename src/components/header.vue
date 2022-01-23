@@ -155,7 +155,7 @@ input:checked + .slider-switch:before {
   padding: 0;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
-  color: var(--text-title);
+  color: #f3f5f9;
   animation: fall 2s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
   animation-delay: 1s;
   /* color: transparent; */
