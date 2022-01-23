@@ -168,7 +168,6 @@ export default {
       slider.style.transform += `translateX(-${ArrayItems[0].clientWidth}px)`
       if (e) {
         this.counter--
-        console.log(this.counter)
       }
       if (this.counter === (-ArrayItems.length - 1)) {
         e.target.style.display = 'none'
