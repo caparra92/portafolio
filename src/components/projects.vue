@@ -12,7 +12,7 @@
               <Card
                 class="card col-sm-12 text-gray-900"
                 image="card-component.png"
-                title="basic-card-component.netlifly.app"
+                title="component.netlifly.app"
                 description="Simple card component made with css flexbox"
                 ref="card13"
               ></Card>
